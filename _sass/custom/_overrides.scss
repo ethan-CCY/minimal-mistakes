@@ -32,3 +32,20 @@
   object-position: center;
   display: block;
 }
+
+/* Album page (tabs) thumbnails: force 4:3 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 12px;
+  background: #f3f3f3;
+}
