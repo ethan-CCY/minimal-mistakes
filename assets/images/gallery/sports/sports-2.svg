@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">運動相簿占位圖 2</title>
+  <desc id="desc">替換為運動練習或比賽畫面。</desc>
+  <defs>
+    <linearGradient id="grad-sport-2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#122f67"/>
+      <stop offset="100%" stop-color="#1c4fa0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#grad-sport-2)" rx="32"/>
+  <g fill="#e6f2ff" font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <text x="50%" y="45%" font-size="68" font-weight="700">SPORTS</text>
+    <text x="50%" y="60%" font-size="38">上傳照片即可更新</text>
+  </g>
+</svg>

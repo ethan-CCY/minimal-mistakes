@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">美食相簿占位圖 2</title>
+  <desc id="desc">替換成餐桌與咖啡館的紀錄。</desc>
+  <defs>
+    <linearGradient id="grad-food-2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b2a2a"/>
+      <stop offset="100%" stop-color="#d94e4e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#grad-food-2)" rx="32"/>
+  <g fill="#ffe5d0" font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <text x="50%" y="45%" font-size="64" font-weight="700">DELICIOUS</text>
+    <text x="50%" y="60%" font-size="36">上傳後即可呈現</text>
+  </g>
+</svg>

@@ -2,6 +2,8 @@
 main:
   - title: "首頁"
     url: /
+  - title: "相簿"
+    url: /gallery/
   - title: "關於 Ethan"
     url: /about/
   - title: "近期文章"

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">溯溪相簿占位圖 2</title>
+  <desc id="desc">替換為攀石、跳水或溪邊露營照片。</desc>
+  <defs>
+    <linearGradient id="grad-river-2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f3a5c"/>
+      <stop offset="100%" stop-color="#176b87"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#grad-river-2)" rx="32"/>
+  <g fill="#e0f7ff" font-family="'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <text x="50%" y="45%" font-size="66" font-weight="700">RIVER TRACING</text>
+    <text x="50%" y="60%" font-size="36">上傳照片就會自動顯示</text>
+  </g>
+</svg>
