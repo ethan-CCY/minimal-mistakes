@@ -18,26 +18,20 @@ gallery_categories:
     description: "旅途中遇見的料理與甜點。"
     caption: "圖片檔名可自由調整，版面會自動排版。"
 sport:
-  - image_path: /assets/images/gallery/sport-1.svg
+  - image_path: /assets/images/gallery/BV/BV-01.jpg
     alt: "球場上的步伐"
     title: "球場上的步伐"
-  - image_path: /assets/images/gallery/sport-2.svg
-    alt: "訓練與突破"
-    title: "訓練與突破"
 river_tracing:
-  - image_path: /assets/images/gallery/river-1.svg
+  - image_path: /assets/images/gallery/RiverTracing/river-01.JPG
     alt: "山林溪谷"
     title: "山林溪谷"
-  - image_path: /assets/images/gallery/river-2.svg
+  - image_path: /assets/images/gallery/RiverTracing/river-02.jpeg
     alt: "溪谷與浪花"
     title: "溪谷與浪花"
 food:
-  - image_path: /assets/images/gallery/food-1.svg
+  - image_path: /assets/images/gallery/Food/food-01.jpg
     alt: "甜點咖啡時光"
     title: "甜點咖啡時光"
-  - image_path: /assets/images/gallery/food-2.svg
-    alt: "好味道留影"
-    title: "好味道留影"
 ---
 
 歡迎來到 **相簿**！這裡預留了運動、溯溪與美食的分冊相簿，之後把自己的照片放進 `assets/images/gallery/` 就能立即顯示，並保持手機與桌機版面皆適配。
