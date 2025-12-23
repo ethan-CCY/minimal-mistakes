@@ -9,7 +9,8 @@ on:
 
 jobs:
   build:
-    if: github.repository == 'mmistakes/minimal-mistakes'
+    # ✅ 建議先拿掉，否則 fork 不會跑
+    # if: github.repository == 'mmistakes/minimal-mi
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -39,9 +40,7 @@ jobs:
         bundle install --jobs=4 --retry=3
         bundle clean
 
-    - name: Update Algolia index
-      working-directory: docs/
-      run: bundle exec jekyll algolia push
-      env:
-        ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      continue-on-error: true
+# ✅ 如果沒有用 Algolia，這段可以先註解或移除
+    - name: Build site
+      working-directory: minimal-mistakes/
+      run: bundle exec jekyll build
