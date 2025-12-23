@@ -9,7 +9,8 @@ on:
 
 jobs:
   build:
-    if: github.repository == 'mmistakes/minimal-mistakes'
+    # ✅ 建議先拿掉，否則 fork 不會跑
+    # if: github.repository == 'mmistakes/minimal-mistakes'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -24,23 +25,24 @@ jobs:
       uses: actions/cache@v4
       with:
         path: |
-          docs/Gemfile.lock
-          docs/vendor/bundle
-        key: ${{ runner.os }}-bundler-${{ hashFiles('docs/Gemfile') }}
+          minimal-mistakes/Gemfile.lock
+          minimal-mistakes/vendor/bundle
+        key: ${{ runner.os }}-bundler-${{ hashFiles('minimal-mistakes/Gemfile') }}
         restore-keys: |
           ${{ runner.os }}-bundler-
 
     - name: Install - Bundler
       env:
         MAKE: make -j2
-      working-directory: docs/
+      working-directory: minimal-mistakes/
       run: |
         bundle config set path vendor/bundle
         bundle install --jobs=4 --retry=3
         bundle clean
 
+    # ✅ 如果沒有用 Algolia，這段可以先註解或移除
     - name: Update Algolia index
-      working-directory: docs/
+      working-directory: minimal-mistakes/
       run: bundle exec jekyll algolia push
       env:
         ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
