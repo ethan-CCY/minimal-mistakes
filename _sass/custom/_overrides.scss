@@ -1,44 +1,9 @@
-/* Make gallery page content wider */
-.layout--single .page__content {
-  max-width: 1200px;
+/* Wider content only for gallery page */
+.wide-gallery .layout--single .page__content {
+  max-width: 1360px;
 }
 
-/* Force gallery thumbnails to 4:3 */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-/* 每一個縮圖容器 */
-.gallery__item,
-.gallery-item {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #f3f3f3;
-}
-
-/* 連結本身要撐滿 */
-.gallery__item > a,
-.gallery-item > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* 真正的圖片 */
-.gallery__item img,
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* 關鍵：直拍會被裁 */
-  object-position: center;
-  display: block;
-}
-
-/* Album grid: 4 columns on desktop */
+/* Neutralize default thirds float and build a dense responsive grid */
 .gallery-grid.third {
   float: none;
   width: 100%;
@@ -48,26 +13,134 @@
 .gallery-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-@media (max-width: 1024px) {
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); } /* 平板 3 欄 */
+@media (max-width: 1100px) {
+  .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); } /* 大手機/小平板 2 欄 */
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 480px) {
-  .gallery-grid { grid-template-columns: 1fr; } /* 手機 1 欄 */
+@media (max-width: 520px) {
+  .gallery-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+.gallery-grid a {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f7f7f7;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-grid a:hover,
+.gallery-grid a:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
 .gallery-grid img {
   width: 100%;
+  height: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: center;
   display: block;
-  border-radius: 12px;
 }
+
+/* Lightbox styles are inlined on gallery page for critical CSS; duplicated here to ensure compilation */
+.glightbox-layer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1.5rem;
+}
+
+.glightbox-layer.is-visible { display: flex; }
+
+.glightbox-content {
+  position: relative;
+  max-width: 1200px;
+  width: min(90vw, 1200px);
+  color: #fff;
+}
+
+.glightbox-media {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+}
+
+.glightbox-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  background: #111;
+}
+
+.glightbox-caption {
+  margin-top: 0.6rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.glightbox-close,
+.glightbox-prev,
+.glightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.glightbox-close:hover,
+.glightbox-prev:hover,
+.glightbox-next:hover { background: rgba(0, 0, 0, 0.65); }
+
+.glightbox-close { top: 12px; right: 12px; transform: none; }
+.glightbox-prev { left: -56px; }
+.glightbox-next { right: -56px; }
+
+@media (max-width: 900px) {
+  .glightbox-prev { left: 8px; }
+  .glightbox-next { right: 8px; }
+}
+
+@media (max-width: 640px) {
+  .glightbox-prev,
+  .glightbox-next {
+    width: 38px;
+    height: 38px;
+  }
+
+  .glightbox-caption { font-size: 0.9rem; }
+}
+
+body.glightbox-open { overflow: hidden; }

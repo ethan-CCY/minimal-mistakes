@@ -2,7 +2,8 @@
 layout: single
 title: "相簿"
 permalink: /gallery/
-classes: wide
+classes: wide wide-gallery
+glightbox: true
 excerpt: "運動、溯溪與美食的影像記事，隨時可替換成你的照片。"
 gallery_categories:
   - id: sport
@@ -19,25 +20,37 @@ gallery_categories:
     caption: "圖片檔名可自由調整，版面會自動排版。"
 sport:
   - image_path: /assets/images/gallery/BV/BV-01.jpg
-    alt: "球場上的步伐"
+    alt: "球場上帶球加速的瞬間"
     title: "球場上的步伐"
+  - image_path: /assets/images/gallery/sport-1.svg
+    alt: "跑者跨出起跑的剪影"
+    title: "路跑起跑"
+  - image_path: /assets/images/gallery/sport-2.svg
+    alt: "健身房啞鈴與拉伸"
+    title: "健身熱身"
 river_tracing:
   - image_path: /assets/images/gallery/RiverTracing/river-01.webp
-    alt: "山林溪谷"
+    alt: "山林間的溪谷光影"
     title: "山林溪谷"
   - image_path: /assets/images/gallery/RiverTracing/river-02.webp
-    alt: "溪谷與浪花"
+    alt: "溪谷湍流與陽光"
     title: "溪谷與浪花"
   - image_path: /assets/images/gallery/RiverTracing/river-03.webp
-    alt: "峽谷水域"
+    alt: "峽谷水面與巨岩"
     title: "峽谷水域"
   - image_path: /assets/images/gallery/RiverTracing/river-04.webp
-    alt: "溪谷步道"
+    alt: "沿著溪谷前行的步道"
     title: "溪谷步道"
 food:
   - image_path: /assets/images/gallery/Food/food-01.jpg
-    alt: "甜點咖啡時光"
+    alt: "甜點與咖啡的午後"
     title: "甜點咖啡時光"
+  - image_path: /assets/images/gallery/food-1.svg
+    alt: "手繪甜點插畫"
+    title: "甜點插畫"
+  - image_path: /assets/images/gallery/food-2.svg
+    alt: "咖啡豆與杯子的插畫"
+    title: "咖啡插畫"
 ---
 
 歡迎來到 **相簿**！這裡預留了運動、溯溪與美食的分冊相簿，之後把自己的照片放進 `assets/images/gallery/` 就能立即顯示，並保持手機與桌機版面皆適配。
