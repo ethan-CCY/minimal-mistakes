@@ -1,44 +1,9 @@
-/* Make gallery page content wider */
-.layout--single .page__content {
-  max-width: 1200px;
+/* Gallery page wider layout only */
+.wide-gallery .page__content {
+  max-width: 1360px;
 }
 
-/* Force gallery thumbnails to 4:3 */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-/* 每一個縮圖容器 */
-.gallery__item,
-.gallery-item {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #f3f3f3;
-}
-
-/* 連結本身要撐滿 */
-.gallery__item > a,
-.gallery-item > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* 真正的圖片 */
-.gallery__item img,
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* 關鍵：直拍會被裁 */
-  object-position: center;
-  display: block;
-}
-
-/* Album grid: 4 columns on desktop */
+/* Album grid reset and layout */
 .gallery-grid.third {
   float: none;
   width: 100%;
@@ -47,27 +12,63 @@
 
 .gallery-grid {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
 }
 
-@media (max-width: 1024px) {
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); } /* 平板 3 欄 */
+@media (max-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
-@media (max-width: 768px) {
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); } /* 大手機/小平板 2 欄 */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
 }
 
 @media (max-width: 480px) {
-  .gallery-grid { grid-template-columns: 1fr; } /* 手機 1 欄 */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+.gallery-grid a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #f3f5f7;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gallery-grid a:hover,
+.gallery-grid a:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
 }
 
 .gallery-grid img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  border-radius: 12px;
+}
+
+.no-scroll,
+.no-scroll body {
+  overflow: hidden;
 }

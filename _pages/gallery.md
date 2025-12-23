@@ -2,7 +2,7 @@
 layout: single
 title: "相簿"
 permalink: /gallery/
-classes: wide
+classes: [wide, wide-gallery]
 excerpt: "運動、溯溪與美食的影像記事，隨時可替換成你的照片。"
 gallery_categories:
   - id: sport
@@ -18,27 +18,35 @@ gallery_categories:
     description: "旅途中遇見的料理與甜點。"
     caption: "圖片檔名可自由調整，版面會自動排版。"
 sport:
-  - image_path: /assets/images/gallery/BV/BV-01.jpg
-    alt: "球場上的步伐"
-    title: "球場上的步伐"
+  - image_path: assets/images/gallery/BV/BV-01.jpg
+    alt: "籃球場上的快攻瞬間"
+    title: "籃球場上的快攻"
+    caption: "籃球場快攻，隊友在側翼跑位。"
 river_tracing:
-  - image_path: /assets/images/gallery/RiverTracing/river-01.webp
-    alt: "山林溪谷"
+  - image_path: assets/images/gallery/RiverTracing/river-01.webp
+    alt: "山林間的清澈溪谷"
     title: "山林溪谷"
-  - image_path: /assets/images/gallery/RiverTracing/river-02.webp
-    alt: "溪谷與浪花"
+    caption: "陽光穿透山谷的清澈溪流。"
+  - image_path: assets/images/gallery/RiverTracing/river-02.webp
+    alt: "溪谷浪花與巨石"
     title: "溪谷與浪花"
-  - image_path: /assets/images/gallery/RiverTracing/river-03.webp
-    alt: "峽谷水域"
+    caption: "溪谷浪花拍打巨石的動態瞬間。"
+  - image_path: assets/images/gallery/RiverTracing/river-03.webp
+    alt: "狹長峽谷中的水道"
     title: "峽谷水域"
-  - image_path: /assets/images/gallery/RiverTracing/river-04.webp
-    alt: "溪谷步道"
+    caption: "峽谷水域蜿蜒，周圍岩壁直立。"
+  - image_path: assets/images/gallery/RiverTracing/river-04.webp
+    alt: "溪谷步道與林木"
     title: "溪谷步道"
+    caption: "沿著溪谷步道前進，兩側林木茂密。"
 food:
-  - image_path: /assets/images/gallery/Food/food-01.jpg
-    alt: "甜點咖啡時光"
+  - image_path: assets/images/gallery/Food/food-01.jpg
+    alt: "甜點與咖啡的下午茶"
     title: "甜點咖啡時光"
+    caption: "莓果塔與手沖咖啡的悠閒午後。"
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/gallery-lightbox.css' | relative_url }}">
 
 歡迎來到 **相簿**！這裡預留了運動、溯溪與美食的分冊相簿，之後把自己的照片放進 `assets/images/gallery/` 就能立即顯示，並保持手機與桌機版面皆適配。
 
@@ -131,3 +139,5 @@ food:
     });
   });
 </script>
+
+<script src="{{ '/assets/js/gallery-lightbox.js' | relative_url }}"></script>

@@ -1,0 +1,122 @@
+.album-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+}
+
+.album-lightbox.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.album-lightbox__frame {
+  position: relative;
+  max-width: calc(100vw - 120px);
+  max-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.album-lightbox__image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+  background: #111;
+}
+
+.album-lightbox__caption {
+  margin-top: 0.75rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  max-width: min(90vw, 960px);
+  line-height: 1.5;
+}
+
+.album-lightbox__close,
+.album-lightbox__nav {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: 0;
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.album-lightbox__close:hover,
+.album-lightbox__nav:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.album-lightbox__close {
+  top: 16px;
+  right: 16px;
+}
+
+.album-lightbox__nav {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.15rem;
+}
+
+.album-lightbox__nav--prev {
+  left: 18px;
+}
+
+.album-lightbox__nav--next {
+  right: 18px;
+}
+
+@media (max-width: 768px) {
+  .album-lightbox__frame {
+    max-width: calc(100vw - 48px);
+    max-height: calc(100vh - 140px);
+  }
+
+  .album-lightbox__close,
+  .album-lightbox__nav {
+    padding: 0.55rem 0.75rem;
+  }
+
+  .album-lightbox__caption {
+    margin: 0.5rem;
+    max-width: calc(100vw - 32px);
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .album-lightbox__frame {
+    max-width: calc(100vw - 32px);
+    max-height: calc(100vh - 180px);
+  }
+
+  .album-lightbox__close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .album-lightbox__nav--prev {
+    left: 8px;
+  }
+
+  .album-lightbox__nav--next {
+    right: 8px;
+  }
+}

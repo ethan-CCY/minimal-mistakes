@@ -1,7 +1,9 @@
 {% if include.id %}
   {% assign gallery = page[include.id] %}
+  {% assign gallery_id = include.id %}
 {% else %}
   {% assign gallery = page.gallery %}
+  {% assign gallery_id = 'gallery' %}
 {% endif %}
 
 {% if include.layout %}
@@ -18,16 +20,16 @@
 
 <figure class="{{ gallery_layout }} {{ include.class }}">
   {% for img in gallery %}
-    {% if img.url %}
-      <a href="{{ img.url | relative_url }}"
-        {% if img.title %}title="{{ img.title | escape_once }}"{% endif %}>
-          <img src="{{ img.image_path | relative_url }}"
-               alt="{% if img.alt %}{{ img.alt | escape_once }}{% endif %}">
-      </a>
-    {% else %}
-      <img src="{{ img.image_path | relative_url }}"
-           alt="{% if img.alt %}{{ img.alt | escape_once }}{% endif %}">
-    {% endif %}
+    {% assign image_src = img.image_path | relative_url %}
+    {% assign image_caption = img.caption | default: img.title | default: img.alt %}
+    <a class="gallery-lightbox"
+       href="{{ image_src }}"
+       data-gallery="{{ gallery_id }}"
+       {% if image_caption %}data-title="{{ image_caption | escape_once }}"{% endif %}>
+        <img src="{{ image_src }}"
+             alt="{{ img.alt | default: img.title | default: '相簿照片' | escape_once }}"
+             loading="lazy">
+    </a>
   {% endfor %}
   {% if include.caption %}
     <figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
