@@ -1,5 +1,25 @@
 <!-- start custom head snippets -->
 
+{% if page.glightbox %}
+  <link rel="preload" href="{{ '/assets/js/glightbox.js' | relative_url }}" as="script">
+  <style>
+    .glightbox-layer{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:9999;padding:1.5rem;background:rgba(0,0,0,0.8)}
+    .glightbox-layer.is-visible{display:flex}
+    .glightbox-content{position:relative;max-width:1200px;width:min(90vw,1200px);color:#fff}
+    .glightbox-media{position:relative;width:100%;overflow:hidden;border-radius:12px;background:#111}
+    .glightbox-media img{display:block;width:100%;height:auto;max-height:80vh;object-fit:contain;background:#111}
+    .glightbox-caption{margin-top:.6rem;background:rgba(0,0,0,0.4);padding:.75rem 1rem;border-radius:10px;font-size:.95rem;line-height:1.5}
+    .glightbox-close,.glightbox-prev,.glightbox-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.45);color:#fff;border:0;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;cursor:pointer;transition:background .2s ease,transform .2s ease}
+    .glightbox-close:hover,.glightbox-prev:hover,.glightbox-next:hover{background:rgba(0,0,0,0.65)}
+    .glightbox-close{top:12px;right:12px;transform:none}
+    .glightbox-prev{left:-56px}
+    .glightbox-next{right:-56px}
+    @media(max-width:900px){.glightbox-prev{left:8px}.glightbox-next{right:8px}}
+    @media(max-width:640px){.glightbox-prev,.glightbox-next{width:38px;height:38px}.glightbox-caption{font-size:.9rem}}
+    body.glightbox-open{overflow:hidden}
+  </style>
+{% endif %}
+
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
