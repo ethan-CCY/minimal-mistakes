@@ -51,6 +51,14 @@ body {
     margin-inline: 0;
     width: 100%;
     clear: both;
+    background: $content-background-color;
+    padding: 1.25em;
+    border-radius: $border-radius;
+    box-shadow: 0 8px 20px rgba(#000, 0.05);
+
+    @include breakpoint($large) {
+      padding: 1.75em;
+    }
 
     .page__content,
     .page__meta,
@@ -61,6 +69,18 @@ body {
       width: 100%;
       clear: both;
     }
+  }
+}
+
+.splash .page__content {
+  background: $content-background-color;
+  padding: 1.25em;
+  border-radius: $border-radius;
+  box-shadow: 0 8px 20px rgba(#000, 0.05);
+  margin-top: 1em;
+
+  @include breakpoint($large) {
+    padding: 1.75em;
   }
 }
 
