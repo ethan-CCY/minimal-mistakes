@@ -22,12 +22,18 @@ sport:
     alt: "球場上的步伐"
     title: "球場上的步伐"
 river_tracing:
-  - image_path: /assets/images/gallery/RiverTracing/river-01.JPG
+  - image_path: /assets/images/gallery/RiverTracing/river-01.webp
     alt: "山林溪谷"
     title: "山林溪谷"
-  - image_path: /assets/images/gallery/RiverTracing/river-02.jpeg
+  - image_path: /assets/images/gallery/RiverTracing/river-02.webp
     alt: "溪谷與浪花"
     title: "溪谷與浪花"
+  - image_path: /assets/images/gallery/RiverTracing/river-03.webp
+    alt: "峽谷水域"
+    title: "峽谷水域"
+  - image_path: /assets/images/gallery/RiverTracing/river-04.webp
+    alt: "溪谷步道"
+    title: "溪谷步道"
 food:
   - image_path: /assets/images/gallery/Food/food-01.jpg
     alt: "甜點咖啡時光"
