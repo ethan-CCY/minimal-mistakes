@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">溯溪相簿佔位圖 1</title>
+  <desc id="desc">山景與溪水意象的佔位圖</desc>
+  <defs>
+    <linearGradient id="riverSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a8dadc"/>
+      <stop offset="100%" stop-color="#457b9d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#riverSky)" rx="24"/>
+  <path d="M0 320 Q200 260 360 300 T800 280 L800 500 L0 500 Z" fill="#1d3557" opacity="0.9"/>
+  <path d="M0 340 Q200 420 420 360 T800 420 L800 500 L0 500 Z" fill="#f1faee" opacity="0.9"/>
+  <path d="M0 360 Q260 300 520 340 T800 320" fill="none" stroke="#e9ecef" stroke-width="10" stroke-linecap="round" stroke-dasharray="14 16"/>
+  <text x="50%" y="110" text-anchor="middle" font-family="'Inter', 'Noto Sans TC', sans-serif" font-size="30" fill="#0b132b">山林溪谷</text>
+</svg>
