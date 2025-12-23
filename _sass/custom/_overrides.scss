@@ -1,0 +1,21 @@
+/* Gallery thumbnails: force 4:3 ratio */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery figure {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f3f3f3;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* 關鍵：直拍會被裁，但不變形 */
+  object-position: center;
+}
