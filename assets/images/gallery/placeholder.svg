@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Gallery placeholder</title>
+  <desc id="desc">Placeholder image for the gallery until photos are uploaded.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f4ff" />
+      <stop offset="100%" stop-color="#d8e4ff" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)" />
+  <rect x="100" y="120" width="600" height="360" rx="12" fill="#ffffff" stroke="#8ca5d4" stroke-width="8" stroke-dasharray="16 16" />
+  <circle cx="260" cy="280" r="70" fill="#a2b8e5" />
+  <path d="M200 410 L340 310 L430 370 L520 290 L620 380 L620 410 Z" fill="#c5d3f0" />
+  <text x="400" y="470" font-family="'Helvetica Neue', Arial, sans-serif" font-size="42" fill="#7185b8" text-anchor="middle">待上傳照片</text>
+</svg>
