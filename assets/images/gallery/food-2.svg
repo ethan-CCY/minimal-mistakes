@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">美食相簿佔位圖 2</title>
+  <desc id="desc">食材配色拼貼的佔位圖</desc>
+  <defs>
+    <linearGradient id="foodGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e76f51"/>
+      <stop offset="100%" stop-color="#f4d35e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#foodGradient2)" rx="24"/>
+  <rect x="80" y="80" width="200" height="180" rx="18" fill="#fefae0" stroke="#bc6c25" stroke-width="12"/>
+  <rect x="320" y="90" width="180" height="140" rx="18" fill="#283618" opacity="0.85"/>
+  <rect x="540" y="120" width="160" height="220" rx="18" fill="#606c38" opacity="0.85"/>
+  <rect x="120" y="300" width="520" height="90" rx="18" fill="#fff" opacity="0.9" stroke="#283618" stroke-width="10"/>
+  <text x="380" y="360" text-anchor="middle" font-family="'Inter', 'Noto Sans TC', sans-serif" font-size="30" fill="#bc6c25">好味道留影</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">美食相簿佔位圖 1</title>
+  <desc id="desc">甜點與咖啡意象的佔位圖</desc>
+  <defs>
+    <linearGradient id="foodGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8edeb"/>
+      <stop offset="100%" stop-color="#f4a261"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#foodGradient1)" rx="24"/>
+  <circle cx="260" cy="260" r="120" fill="#fff" stroke="#e36414" stroke-width="10"/>
+  <path d="M220 260 Q260 220 300 260 T380 260" fill="none" stroke="#e36414" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="520" cy="240" r="90" fill="#3d1d0b" opacity="0.9"/>
+  <circle cx="520" cy="240" r="52" fill="#b08968" opacity="0.85"/>
+  <text x="400" y="430" text-anchor="middle" font-family="'Inter', 'Noto Sans TC', sans-serif" font-size="28" fill="#6d2e0e">甜點咖啡時光</text>
+</svg>

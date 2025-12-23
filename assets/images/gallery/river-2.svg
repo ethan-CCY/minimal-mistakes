@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">溯溪相簿佔位圖 2</title>
+  <desc id="desc">峽谷與水花線條的佔位圖</desc>
+  <defs>
+    <linearGradient id="riverGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#264653"/>
+      <stop offset="100%" stop-color="#2a9d8f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#riverGradient2)" rx="24"/>
+  <path d="M60 420 Q230 360 400 420 T740 360" fill="none" stroke="#e9c46a" stroke-width="12" stroke-linecap="round" stroke-dasharray="12 14"/>
+  <path d="M120 180 Q200 140 260 200 T400 170 T560 210 T720 180" fill="none" stroke="#e9c46a" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="400" cy="300" r="90" fill="none" stroke="#f4a261" stroke-width="10"/>
+  <text x="400" y="90" text-anchor="middle" font-family="'Inter', 'Noto Sans TC', sans-serif" font-size="30" fill="#f1faee">溪谷與浪花</text>
+</svg>
