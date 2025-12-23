@@ -18,11 +18,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "zh-TW"
 timezone                 : "Asia/Taipei"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Ethan｜運動 · 自然 · 生技觀察"
+title                    : "Ethan｜運動 · 自然 · 保健 · 科技"
 title_separator          : "-"
 subtitle                 : "用簡單的方式分享運動、健康與科技靈感"
 name                     : "Ethan"
-description              : "探索生活、熱愛運動，也關注生技與健康新知，記錄值得分享的觀察與思考。"
+description              : "探索生活、熱愛運動，也關注科技與健康新知，記錄值得分享的觀察與思考。"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -116,7 +116,7 @@ analytics:
 author:
   name             : "Ethan"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "探索生活｜熱愛運動｜關注生技與健康新知"
+  bio              : "探索生活｜熱愛運動｜關注科技與健康新知"
   location         : "臺灣"
   email            :
   links: []
