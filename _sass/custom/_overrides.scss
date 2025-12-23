@@ -33,13 +33,21 @@
   display: block;
 }
 
-/* Album page (tabs) thumbnails: force 4:3 */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
+/* Album grid: bigger thumbnails */
+.gallery-grid.third {
+  float: none;
+  width: 100%;
+  margin: 0;
 }
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 220 -> 320 */
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* 4:3 thumbs */
 .gallery-grid img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -47,30 +55,12 @@
   object-position: center;
   display: block;
   border-radius: 12px;
-  background: #f3f3f3;
 }
 
-/* Album page: neutralize theme "third" float layout on the gallery grid */
-.gallery-grid.third {
-  float: none;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+/* 手機：一欄滿版 */
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Ensure the grid container is actually grid */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-/* Force thumbnails to 4:3 */
-.gallery-grid img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
