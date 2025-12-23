@@ -59,6 +59,36 @@ en-GB:
 en-AU:
   <<: *DEFAULT_EN
 
+zh-TW:
+  <<: *DEFAULT_EN
+  skip_links                 : "略過連結"
+  skip_primary_nav           : "跳到主選單"
+  skip_content               : "跳到內容"
+  skip_footer                : "跳到頁尾"
+  page                       : "頁面"
+  pagination_previous        : "上一頁"
+  pagination_next            : "下一頁"
+  breadcrumb_home_label      : "首頁"
+  menu_label                 : "開啟選單"
+  search_label               : "開啟搜尋"
+  toc_label                  : "本頁重點"
+  minute_read                : "分鐘閱讀"
+  share_on_label             : "分享至"
+  tags_label                 : "標籤："
+  categories_label           : "分類："
+  date_label                 : "更新："
+  comments_label             : "留言"
+  comments_title             : "留言"
+  more_label                 : "閱讀更多"
+  related_label              : "你或許也會喜歡"
+  follow_label               : "追蹤："
+  feed_label                 : "訂閱"
+  powered_by                 : "本站使用"
+  website_label              : "網站"
+  email_label                : "Email"
+  recent_posts               : "最新文章"
+  back_to_top                : "回到頂部"
+
 # Spanish
 # -------
 es: &DEFAULT_ES
