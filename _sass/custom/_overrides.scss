@@ -1,11 +1,13 @@
-/* Gallery thumbnails: force 4:3 ratio */
+/* Force gallery thumbnails to 4:3 */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1rem;
 }
 
-.gallery figure {
+/* 每一個縮圖容器 */
+.gallery__item,
+.gallery-item {
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
@@ -13,9 +15,20 @@
   background: #f3f3f3;
 }
 
-.gallery img {
+/* 連結本身要撐滿 */
+.gallery__item > a,
+.gallery-item > a {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* 關鍵：直拍會被裁，但不變形 */
+}
+
+/* 真正的圖片 */
+.gallery__item img,
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* 關鍵：直拍會被裁 */
   object-position: center;
+  display: block;
 }
