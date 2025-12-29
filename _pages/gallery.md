@@ -2,7 +2,7 @@
 layout: single
 title: "相簿"
 permalink: /gallery/
-classes: wide
+classes: [wide-gallery]
 excerpt: "運動、溯溪與美食的影像記事，隨時可替換成你的照片。"
 gallery_categories:
   - id: sport
@@ -56,78 +56,4 @@ food:
 </section>
 {% endfor %}
 
-<style>
-.gallery-tablist {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin: 0 0 1.25rem;
-}
-.gallery-tab {
-  cursor: pointer;
-  border-radius: 999px;
-  border: 1px solid var(--mm-border-color, #d9d9d9);
-  background: #f9fafb;
-  color: inherit;
-  padding: 0.6rem 1.1rem;
-  transition: all 0.2s ease;
-  font-weight: 600;
-}
-.gallery-tab.is-active {
-  background: var(--mm-accent-color, #2a7ae2);
-  color: #fff;
-  border-color: var(--mm-accent-color, #2a7ae2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-.gallery-panel {
-  margin: 0 0 1.75rem;
-}
-.gallery-panel[hidden] {
-  display: none;
-}
-.gallery-panel h2 {
-  margin-bottom: 0.35rem;
-}
-.gallery-description {
-  margin-top: 0;
-  color: var(--mm-muted-color, #666);
-}
-.gallery-grid {
-  margin-top: 0.35rem;
-}
-@media (max-width: 640px) {
-  .gallery-tab {
-    width: 100%;
-    text-align: center;
-  }
-}
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var tabs = Array.prototype.slice.call(document.querySelectorAll('.gallery-tab'));
-    var panels = Array.prototype.slice.call(document.querySelectorAll('.gallery-panel'));
-
-    tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        var target = tab.getAttribute('data-target');
-
-        tabs.forEach(function (button) {
-          var isActive = button === tab;
-          button.classList.toggle('is-active', isActive);
-          button.setAttribute('aria-selected', isActive ? 'true' : 'false');
-        });
-
-        panels.forEach(function (panel) {
-          var isMatch = panel.id === 'gallery-' + target;
-          panel.classList.toggle('is-active', isMatch);
-          if (isMatch) {
-            panel.removeAttribute('hidden');
-          } else {
-            panel.setAttribute('hidden', 'hidden');
-          }
-        });
-      });
-    });
-  });
-</script>
+<script src="{{ '/assets/js/gallery-lightbox.js' | relative_url }}" defer></script>

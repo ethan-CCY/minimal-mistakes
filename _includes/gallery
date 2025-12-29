@@ -1,7 +1,9 @@
 {% if include.id %}
   {% assign gallery = page[include.id] %}
+  {% assign gallery_id = include.id %}
 {% else %}
   {% assign gallery = page.gallery %}
+  {% assign gallery_id = 'gallery' %}
 {% endif %}
 
 {% if include.layout %}
@@ -18,16 +20,26 @@
 
 <figure class="{{ gallery_layout }} {{ include.class }}">
   {% for img in gallery %}
-    {% if img.url %}
-      <a href="{{ img.url | relative_url }}"
-        {% if img.title %}title="{{ img.title | escape_once }}"{% endif %}>
-          <img src="{{ img.image_path | relative_url }}"
-               alt="{% if img.alt %}{{ img.alt | escape_once }}{% endif %}">
-      </a>
+    {% assign original_path = img.url | default: img.image_path %}
+    {% if original_path contains '://' %}
+      {% assign image_href = original_path %}
     {% else %}
-      <img src="{{ img.image_path | relative_url }}"
-           alt="{% if img.alt %}{{ img.alt | escape_once }}{% endif %}">
+      {% assign image_href = original_path | prepend: site.baseurl %}
     {% endif %}
+    {% if img.image_path contains '://' %}
+      {% assign image_src = img.image_path %}
+    {% else %}
+      {% assign image_src = img.image_path | prepend: site.baseurl %}
+    {% endif %}
+    {% assign image_title = img.title | default: img.alt | default: '相簿照片' %}
+    <a href="{{ image_href }}"
+       data-gallery="{{ gallery_id }}"
+       data-title="{{ image_title | escape_once }}"
+       title="{{ image_title | escape_once }}">
+      <img src="{{ image_src }}"
+           alt="{{ img.alt | default: img.title | default: '相簿照片' | escape_once }}"
+           loading="lazy">
+    </a>
   {% endfor %}
   {% if include.caption %}
     <figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
