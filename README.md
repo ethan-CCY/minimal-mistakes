@@ -52,8 +52,6 @@ Minimal Mistakes 內建 **Magnific Popup** 與自訂燈箱同時作用，導致�
 
 ---
 
-## 【第 4 段】GitHub Pages 部署注意事項
-
 ##  GitHub Pages 部署注意事項
 
 - 使用 **Deploy from a branch / ROOT**
@@ -65,8 +63,6 @@ Minimal Mistakes 內建 **Magnific Popup** 與自訂燈箱同時作用，導致�
 
 
 ---
-
-## 【第 5 段】專案結構說明（外框、最穩定）
 
 ##  專案結構說明（重點）
 
@@ -93,8 +89,6 @@ Minimal Mistakes 內建 **Magnific Popup** 與自訂燈箱同時作用，導致�
 ```
 ---
 
-## 【第 6 段】分支策略與 Codex 使用心得
-
 ##  分支與開發習慣（Codex 使用心得）
 
 - 使用 Codex 協助調整樣式與功能
@@ -107,9 +101,7 @@ Minimal Mistakes 內建 **Magnific Popup** 與自訂燈箱同時作用，導致�
 
 ---
 
-## 【第 7 段】致謝與授權（結尾）
-
-## 🙏 原始主題與致謝
+##  原始主題與致謝
 
 本專案基於 **Minimal Mistakes Jekyll Theme**：
 
@@ -119,7 +111,7 @@ Minimal Mistakes 內建 **Magnific Popup** 與自訂燈箱同時作用，導致�
 Minimal Mistakes 為一個功能完整、相容 GitHub Pages 的 Jekyll 主題，  
 本專案僅針對個人需求進行客製與實務修正，原始授權與著作權皆依原專案規範保留。
 
-## 📄 授權說明
+##  授權說明
 - 原始主題：MIT License  
 - 本專案內容與客製調整僅作為學習與展示用途
 
