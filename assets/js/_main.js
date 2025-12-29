@@ -92,7 +92,11 @@ $(document).ready(function () {
     document.body.classList.contains("wide-gallery") ||
     document.querySelector(".gallery-grid");
 
-  if (!shouldSkipMagnific && $(".image-popup").length) {
+  var initMagnificPopup = function () {
+    if (shouldSkipMagnific || !$(".image-popup").length) {
+      return;
+    }
+
     $(".image-popup").magnificPopup({
       // disableOn: function() {
       //   if( $(window).width() < 500 ) {
@@ -126,7 +130,9 @@ $(document).ready(function () {
       closeOnContentClick: true,
       midClick: true, // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
     });
-  }
+  };
+
+  initMagnificPopup();
 
   // Add anchors for headings
   (function () {
