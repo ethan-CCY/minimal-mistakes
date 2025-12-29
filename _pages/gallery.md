@@ -7,40 +7,40 @@ excerpt: "運動、溯溪與美食的影像記事，隨時可替換成你的照�
 gallery_categories:
   - id: sport
     title: "運動"
-    description: "球場、路跑與健身的片刻，替換成你的運動紀錄即可。"
-    caption: "點擊縮圖可放大，後續將實際照片放進 assets/images/gallery/ 即可更新。"
+    description: "在運動中找節奏，用汗水累積身體的改變。"
+    caption: "點擊縮圖可放大瀏覽"
   - id: river_tracing
     title: "溯溪"
-    description: "溪谷、峽谷與野營的留影，支援多張照片與 RWD。"
-    caption: "上傳新的溯溪照片到 assets/images/gallery/ 並調整此頁路徑即可。"
+    description: "從沁涼瀑布到山林溫泉，記錄野溪的四季變化。"
+    caption: "點擊縮圖可放大瀏覽"
   - id: food
     title: "美食"
-    description: "旅途中遇見的料理與甜點。"
-    caption: "圖片檔名可自由調整，版面會自動排版。"
+    description: "從巷口小吃到廚房餐桌，收藏每一餐的溫度。"
+    caption: "點擊縮圖可放大瀏覽"
 sport:
   - image_path: /assets/images/gallery/BV/BV-01.jpg
-    alt: "球場上的步伐"
-    title: "球場上的步伐"
+    alt: "羽球場上的小戴女神"
+    title: "羽球場上的小戴女神"
 river_tracing:
   - image_path: /assets/images/gallery/RiverTracing/river-01.webp
-    alt: "山林溪谷"
-    title: "山林溪谷"
+    alt: "飄起來~Chill一下"
+    title: "飄起來~Chill一下"
   - image_path: /assets/images/gallery/RiverTracing/river-02.webp
-    alt: "溪谷與浪花"
-    title: "溪谷與浪花"
+    alt: "溪谷秘境"
+    title: "溪谷秘境"
   - image_path: /assets/images/gallery/RiverTracing/river-03.webp
-    alt: "峽谷水域"
-    title: "峽谷水域"
+    alt: "爬呀爬呀爬"
+    title: "爬呀爬呀爬"
   - image_path: /assets/images/gallery/RiverTracing/river-04.webp
-    alt: "溪谷步道"
-    title: "溪谷步道"
+    alt: "溯人日常"
+    title: "溯人日常"
 food:
   - image_path: /assets/images/gallery/Food/food-01.jpg
-    alt: "甜點咖啡時光"
-    title: "甜點咖啡時光"
+    alt: "廚房小筆記"
+    title: "控罵控控"
 ---
 
-歡迎來到 **相簿**！這裡預留了運動、溯溪與美食的分冊相簿，之後把自己的照片放進 `assets/images/gallery/` 就能立即顯示，並保持手機與桌機版面皆適配。
+歡迎來到我的相簿，這裡收藏了運動、溯溪與生活風景的紀錄。透過影像分享每一次貼近自然、感受生活細節的瞬間，邀你一起慢慢欣賞、自在探索。
 
 <div class="gallery-tablist" role="tablist" aria-label="相簿分冊切換">
   <button id="tab-sport" class="gallery-tab is-active" role="tab" aria-selected="true" aria-controls="gallery-sport" data-target="sport">運動</button>
