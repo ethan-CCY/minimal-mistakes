@@ -54,7 +54,6 @@ Minimal Mistakes 內建 **Magnific Popup** 與自訂燈箱同時作用，導致�
 
 ## 【第 4 段】GitHub Pages 部署注意事項
 
-```markdown
 ##  GitHub Pages 部署注意事項
 
 - 使用 **Deploy from a branch / ROOT**
@@ -69,7 +68,6 @@ Minimal Mistakes 內建 **Magnific Popup** 與自訂燈箱同時作用，導致�
 
 ## 【第 5 段】專案結構說明（外框、最穩定）
 
-```markdown
 ##  專案結構說明（重點）
 
 ```text
@@ -92,12 +90,11 @@ Minimal Mistakes 內建 **Magnific Popup** 與自訂燈箱同時作用，導致�
 └── _data/
     └── navigation.yml
         └── 導覽列加入「相簿」
-
+```
 ---
 
 ## 【第 6 段】分支策略與 Codex 使用心得
 
-```markdown
 ##  分支與開發習慣（Codex 使用心得）
 
 - 使用 Codex 協助調整樣式與功能
@@ -112,7 +109,6 @@ Minimal Mistakes 內建 **Magnific Popup** 與自訂燈箱同時作用，導致�
 
 ## 【第 7 段】致謝與授權（結尾）
 
-```markdown
 ## 🙏 原始主題與致謝
 
 本專案基於 **Minimal Mistakes Jekyll Theme**：
