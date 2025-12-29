@@ -1,12 +1,10 @@
-# [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
-
 個人部落格與相簿網站（基於 Minimal Mistakes）
 
 本專案為一個使用 Jekyll + GitHub Pages 建立的個人網站，內容包含部落格文章與多分類相簿（運動、溯溪、美食）。
 在保留 Minimal Mistakes 主題原有結構的前提下，針對相簿版面、燈箱行為與 GitHub Pages 部署流程進行多項客製與修正，作為個人學習與實作紀錄。
 
-網站展示：
-👉 https://ethan-ccy.github.io/minimal-mistakes/
+網站展示 (Demo)：
+ https://ethan-ccy.github.io/minimal-mistakes/
 
 專案特色與客製重點
 📸 相簿系統（重點改造）
@@ -123,3 +121,4 @@ README
 原始主題：MIT License
 
 本專案之個人內容與客製調整，僅作為學習與展示用途
+# [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
